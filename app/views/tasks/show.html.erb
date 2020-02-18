@@ -5,4 +5,7 @@
   &nbsp;
   <%= @task.completed ? "This task has been completed" : "This task has not yet been completed" %>
 </p>
+<p>&nbsp;</p>
+<p><%= link_to "Edit this task", edit_task_path(@task) %></p>
+<p><%= link_to "Delete this task", task_path(@task), method: :delete, data: {confirm: "Are you sure?"} %></p>
 <p><%= link_to "Back to the list", tasks_path %></p>
